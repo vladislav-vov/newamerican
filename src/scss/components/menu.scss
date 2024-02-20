@@ -1,0 +1,122 @@
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#878787, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &--active .menu__body {
+    left: 0;
+  }
+
+  &__body {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 44px;
+    width: 50%;
+    height: 100%;
+    padding: 30px 100px 30px 44px;
+    transition: left 0.3s ease-in-out;
+    overflow: auto;
+    background-color: #fff;
+  }
+
+  .menu__close {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    margin-top: 13px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 18px;
+      height: 2px;
+      background-color: #000;
+      border-radius: 2px;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__logo {
+    margin-bottom: 70px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 auto;
+    height: 100%;
+  }
+
+  &__list {
+    flex: 1 1 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__link {
+    color: $titleColor;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+
+  &__action {
+    width: 100%;
+    padding: 35px 0;
+    border-top: 1px solid rgba(#979797, 0.2);
+  }
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 52px;
+  height: 52px;
+  border-radius: 4px;
+  background-color: #fff;
+
+  span {
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: rgba(#000, 0.6);
+  }
+}

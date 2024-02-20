@@ -5,7 +5,85 @@
 })
 
 <body>
-	<h1>Hello World!</h1>
+
+	<section class="promo">
+		<div class="promo__inner">
+			<div class="promo__col" style="background-image: url(../img/promo-bg.jpeg);">
+				<div class="promo__col-inner">
+					<button type="button" class="menu-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="menu">
+						<nav class="menu__body">
+							<button type="button" class="menu__close"></button>
+							<div class="menu__content">
+								<a href="#" class="menu__logo logo">
+									<img src="@img/logo.png" alt="Logo">
+								</a>
+								<ul class="menu__list">
+									<li class="menu__item"><a href="#" class="menu__link">Your teachers</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">Your mortgage journey</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">What our customers say</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">Ebook</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">Webinar</a></li>
+								</ul>
+								<div class="menu__action row row--20">
+									<a href="#" class="button">Get started
+										<svg>
+											<use xlink:href="@img/icons/icons.svg#arrow"></use>
+										</svg>
+									</a>
+									<a href="#" class="button button--outline">Schedule a time</a>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<div class="promo__why">
+						<p class="promo__why-text promo__text promo__text--light">Why a mortgage is so much more
+							than just a rate?</p>
+						<div class="row row--20">
+							<a href="https://www.youtube.com/watch?v=RLgUEEAgvMg" target="_blank" class="play">
+								<svg>
+									<use xlink:href="@img/icons/icons.svg#play"></use>
+								</svg>
+							</a>
+							<div class="time">0:34</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="promo__col">
+				<div class="promo__col-inner">
+					<a href="#" class="promo__logo logo">
+						<img src="@img/logo.png" alt="Logo">
+					</a>
+					<div>
+						<h1 class="promo__title title title--big">Finding a mortgage is so <span>much more</span> than <span>just a
+								rate</span>
+						</h1>
+						<div class="promo__content-text">
+							<p>Rates change, but every mortgage journey starts with a relationship.
+								(Pssst...it’s not just about clicking a button)</p>
+						</div>
+					</div>
+					<div class="promo__action">
+						<p class="promo__action-text promo__text promo__text--dark">Let us help you create your mortgage journey</p>
+						<div class="row row--20">
+							<a href="#" class="button">Get started
+								<svg>
+									<use xlink:href="@img/icons/icons.svg#arrow"></use>
+								</svg>
+							</a>
+							<a href="#" class="button button--outline">Schedule a time</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	@@include('html/_js.htm',{})
 </body>

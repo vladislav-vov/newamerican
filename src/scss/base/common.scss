@@ -1,0 +1,121 @@
+.title {
+  color: $titleColor;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 60px;
+
+  &--big {
+    font-size: 48px;
+  }
+
+  &--light {
+    color: #fff;
+  }
+
+  span {
+    color: $accentColor;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 38px;
+  height: 56px;
+  padding: 15px 30px;
+  border-radius: 4px;
+  background-color: $accentColor;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+
+  svg {
+    fill: #fff;
+    width: 20px;
+    height: 12px;
+  }
+
+  @media (any-hover: hover) {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba($accentColor, 0.8);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $titleColor;
+    border: 1px solid rgba(#979797, 0.2);
+
+    @media (any-hover: hover) {
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $accentColor;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.play {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $accentColor;
+  z-index: 1;
+
+  svg {
+    fill: #fff;
+    width: 11px;
+    height: 16px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba($accentColor, 0.4);
+    animation: pulse 1.5s infinite;
+    z-index: -1;
+  }
+}
+
+.time {
+  color: #fff;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+
+  &--20 {
+    gap: 20px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.36);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
