@@ -1,6 +1,5 @@
 import './libs/dynamicAdapt.js';
 
-import isWebp from './helpers/isWebp.js';
 import {
   calcScroll,
   parseDurationISO,
@@ -10,8 +9,6 @@ import {
 import '../scss/style.scss';
 
 window.addEventListener('DOMContentLoaded', () => {
-  isWebp();
-
   // Menu
   const menuBtn = document.querySelector('.menu-btn');
   const menuClose = document.querySelector('.menu__close');
