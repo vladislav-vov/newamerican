@@ -2,10 +2,11 @@
   color: $titleColor;
   font-weight: 700;
   font-size: 36px;
-  line-height: 60px;
+  line-height: percent(60, 36);
 
   &--big {
-    font-size: 48px;
+    line-height: percent(60, 48);
+    @include adaptiveValue('font-size', 48, 36);
   }
 
   &--light {
@@ -20,7 +21,7 @@
 .button {
   display: inline-flex;
   align-items: center;
-  gap: 38px;
+  @include adaptiveValue('gap', 38, 20);
   height: 56px;
   padding: 15px 30px;
   border-radius: 4px;
@@ -28,6 +29,8 @@
   color: #fff;
   font-weight: 700;
   font-size: 16px;
+  line-height: 110%;
+  text-align: center;
 
   svg {
     fill: #fff;
@@ -99,6 +102,14 @@
 .row {
   display: flex;
   align-items: center;
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &--center {
+    justify-content: center;
+  }
 
   &--20 {
     gap: 20px;

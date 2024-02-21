@@ -1,3 +1,5 @@
+import './libs/dynamicAdapt.js';
+
 import isWebp from './helpers/isWebp.js';
 import calcScroll from './helpers/calcScroll.js';
 

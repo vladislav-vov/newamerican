@@ -7,6 +7,10 @@ body {
   line-height: 24px;
 }
 
+img {
+  max-width: 100%;
+}
+
 [class*='__container'],
 [class*='container'] {
   margin: 0 auto;

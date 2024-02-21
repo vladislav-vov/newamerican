@@ -1,0 +1,150 @@
+.promo {
+  &__inner {
+    min-height: 100vh;
+
+    @media (min-width: $mobile) {
+      display: grid;
+      grid-template-columns: percent(586, 1440) 1fr;
+      @include adaptiveValue('gap', 50, 20, $containerWidth, 992);
+    }
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+    }
+  }
+
+  &__col {
+    padding: 40px 0 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-width: $mobile) {
+      &:nth-child(1) {
+        padding: 24px 0 30px;
+
+        .promo__col-inner {
+          margin-left: auto;
+          padding: 0 10px 0 24px;
+        }
+      }
+
+      &:nth-child(2) {
+        .promo__col-inner {
+          margin-right: auto;
+          padding-right: 15px;
+        }
+
+        @media (max-width: $tablet) {
+          padding: 24px 0 30px;
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      padding: 20px 15px;
+
+      &:nth-child(1) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 auto;
+        min-height: 220px;
+      }
+    }
+
+    @media (max-width: $mobileSmall) {
+      padding: 20px 15px 10px;
+    }
+  }
+
+  &__col-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+
+    @media (min-width: $mobile) {
+      max-width: 715px;
+      height: 100%;
+    }
+
+    @media (max-width: $mobileSmall) {
+      gap: 30px;
+    }
+  }
+
+  &__head {
+    gap: 15px 20px;
+  }
+
+  &__why {
+    max-width: 280px;
+
+    @media (min-width: $tablet) {
+      margin-left: 76px;
+    }
+  }
+
+  &__why-text {
+    margin-bottom: 30px;
+  }
+
+  &__logo {
+    @media (min-width: $tablet) {
+      margin-left: -10px;
+    }
+  }
+
+  &__title {
+    max-width: 580px;
+    margin-bottom: 25px;
+  }
+
+  &__content-text {
+    max-width: 421px;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+
+    &--dark {
+      color: $textColorDark;
+    }
+
+    &--light {
+      color: $textColorLight;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    width: 100%;
+    padding: 33px 0;
+    border-top: 1px solid rgba(#979797, 0.2);
+
+    @media (max-width: $tablet) {
+      padding: 25px 0 15px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      justify-content: center;
+    }
+  }
+
+  &__action-text {
+    flex: 1 1 184px;
+  }
+
+  &__action-btns {
+    gap: 15px 20px;
+  }
+}

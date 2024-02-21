@@ -9,5 +9,10 @@ $accentColor: #278fb4;
 $bgColor: #126893;
 
 $maxWidthContainer: 1240;
+$minWidth: 375;
 $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
+
+$tablet: 992px;
+$mobile: 768px;
+$mobileSmall: 480px;

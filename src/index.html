@@ -10,7 +10,7 @@
 		<div class="promo__inner">
 			<div class="promo__col" style="background-image: url(../img/promo-bg.jpeg);">
 				<div class="promo__col-inner">
-					<button type="button" class="menu-btn">
+					<button data-da=".promo__head, 768, first" type="button" class="menu-btn">
 						<span></span>
 						<span></span>
 						<span></span>
@@ -30,7 +30,7 @@
 									<li class="menu__item"><a href="#" class="menu__link">Ebook</a></li>
 									<li class="menu__item"><a href="#" class="menu__link">Webinar</a></li>
 								</ul>
-								<div class="menu__action row row--20">
+								<div class="menu__action row row--wrap row--center">
 									<a href="#" class="button">Get started
 										<svg>
 											<use xlink:href="@img/icons/icons.svg#arrow"></use>
@@ -57,9 +57,11 @@
 			</div>
 			<div class="promo__col">
 				<div class="promo__col-inner">
-					<a href="#" class="promo__logo logo">
-						<img src="@img/logo.png" alt="Logo">
-					</a>
+					<div class="promo__head row">
+						<a href="#" class="promo__logo logo">
+							<img src="@img/logo.png" alt="Logo">
+						</a>
+					</div>
 					<div>
 						<h1 class="promo__title title title--big">Finding a mortgage is so <span>much more</span> than <span>just a
 								rate</span>
@@ -71,7 +73,7 @@
 					</div>
 					<div class="promo__action">
 						<p class="promo__action-text promo__text promo__text--dark">Let us help you create your mortgage journey</p>
-						<div class="row row--20">
+						<div class="promo__action-btns row row--wrap row--center">
 							<a href="#" class="button">Get started
 								<svg>
 									<use xlink:href="@img/icons/icons.svg#arrow"></use>
