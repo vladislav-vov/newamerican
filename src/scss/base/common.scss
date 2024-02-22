@@ -1,12 +1,45 @@
 .title {
   color: $titleColor;
   font-weight: 700;
-  font-size: 36px;
-  line-height: percent(60, 36);
 
-  &--big {
+  &--border {
+    position: relative;
+    width: max-content;
+    padding-bottom: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 1px;
+      background-color: $borderColorLight;
+    }
+
+    @media (max-width: $mobile) {
+      padding-bottom: 10px;
+    }
+  }
+
+  &--h1 {
     line-height: percent(60, 48);
     @include adaptiveValue('font-size', 48, 36);
+  }
+
+  &--h2 {
+    @include adaptiveValue('font-size', 36, 28);
+    line-height: percent(48, 36);
+  }
+
+  &--h3 {
+    @include adaptiveValue('font-size', 28, 20);
+    line-height: 1;
+  }
+
+  &--h5 {
+    font-size: 16px;
+    line-height: percent(28, 16);
   }
 
   &--light {
@@ -114,6 +147,14 @@
   &--20 {
     gap: 20px;
   }
+}
+
+.accent-subtitle {
+  color: $accentColor;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 @keyframes pulse {

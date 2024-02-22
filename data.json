@@ -1,0 +1,54 @@
+{
+  "mentors": [
+    {
+      "title": "The master mind",
+      "name": "Justin",
+      "text": "Rates change, but every mortgage journey starts with a relationship. (Pssst...it’s not just about clicking a button)",
+      "videoUrl": "https://youtube.com",
+      "thumbnail": "img/mentors/1.png",
+      "skills": [
+        {
+          "name": "Deals",
+          "icon": "img/mentors/icons/briefcase.svg"
+        },
+        {
+          "name": "Find the right way",
+          "icon": "img/mentors/icons/compass.svg"
+        },
+        {
+          "name": "Mortgage «database»",
+          "icon": "img/mentors/icons/database.svg"
+        },
+        {
+          "name": "Docs master",
+          "icon": "img/mentors/icons/doc.svg"
+        }
+      ]
+    },
+    {
+      "title": "The educator",
+      "name": "Scott",
+      "text": "Rates change, but every mortgage journey starts with a relationship. (Pssst...it’s not just about clicking a button)",
+      "videoUrl": "https://youtube.com",
+      "thumbnail": "img/mentors/2.png",
+      "skills": [
+        {
+          "name": "Linguist",
+          "icon": "img/mentors/icons/globe.svg"
+        },
+        {
+          "name": "Perfect place searcher",
+          "icon": "img/mentors/icons/home.svg"
+        },
+        {
+          "name": "Helper",
+          "icon": "img/mentors/icons/life-buoy.svg"
+        },
+        {
+          "name": "Communication Guru",
+          "icon": "img/mentors/icons/users.svg"
+        }
+      ]
+    }
+  ]
+}
