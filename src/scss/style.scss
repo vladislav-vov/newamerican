@@ -7,9 +7,13 @@
 @import './helpers/mixins';
 
 @import './base/global';
+@import './base/animations';
 @import './base/common';
 
 @import './components/menu';
 @import './components/mentor-card';
+@import './components/tutorials-step';
+@import './components/video-block';
+@import './components/popup';
 
 @import './pages/home';

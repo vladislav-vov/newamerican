@@ -1,0 +1,45 @@
+.tutorials-step {
+  position: relative;
+  left: 0;
+  padding: 28px 40px 40px;
+  border: 1px solid $borderColorLight;
+  border-radius: 4px;
+  outline: none;
+
+  @media (max-width: $tablet) {
+    padding: 28px 30px 30px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    padding: 18px 20px 20px;
+  }
+
+  &__inner {
+    position: relative;
+    padding-top: 22px;
+
+    &::before {
+      counter-increment: steps-counter;
+      content: '0' counter(steps-counter);
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include accent-subtitle;
+      transition: background-color 0.3s ease-in-out;
+      z-index: 1;
+
+      &:nth-child(n + 10) {
+        content: counter(steps-counter);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__text {
+    transition: color 0.3s ease-in-out;
+  }
+}

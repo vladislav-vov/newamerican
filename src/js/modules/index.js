@@ -1,3 +1,5 @@
 export { default as menu } from './menu.js';
 export { default as fetchMentors } from './mentors.js';
 export { default as updateVideoBlocksTime } from './videoBlock.js';
+export { default as stepNavigation } from './stepsNavigation.js';
+export { default as popup } from './popup.js';

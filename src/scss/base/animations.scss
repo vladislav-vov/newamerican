@@ -1,0 +1,20 @@
+@include pulse('pulse-btn', 1.36);
+@include pulse('pulse-dot', 2);
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

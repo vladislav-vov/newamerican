@@ -35,3 +35,55 @@ export function formatTime(secondsTime) {
     ? `${formattedHours}:${formattedMinutes}:${formattedSeconds}`
     : `${formattedMinutes}:${formattedSeconds}`;
 }
+
+export function setElementStyles(element, styles) {
+  for (const [key, value] of Object.entries(styles)) {
+    element.style[key] = value;
+  }
+}
+
+export function removeExcessElements(nodes, i) {
+  nodes.slice(i).forEach((node) => node.remove());
+  nodes.splice(i);
+}
+
+export function scrollToElement(selector) {
+  const targetElem = document.querySelector(selector);
+
+  let targetElemPosition =
+    targetElem.getBoundingClientRect().top + window.scrollY - 60;
+
+  if (targetElem) {
+    window.scrollTo({
+      top: targetElemPosition,
+      behavior: 'smooth',
+    });
+  }
+}
+
+export let isMobile = {
+  Android: function () {
+    return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function () {
+    return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function () {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function () {
+    return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function () {
+    return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function () {
+    return (
+      isMobile.Android() ||
+      isMobile.BlackBerry() ||
+      isMobile.iOS() ||
+      isMobile.Opera() ||
+      isMobile.Windows()
+    );
+  },
+};

@@ -1,3 +1,7 @@
+:root {
+  --animation-duration: 500ms;
+}
+
 $fontFamily: 'Roboto';
 $fontSize: 14;
 
@@ -6,6 +10,7 @@ $textColorLight: #fff;
 $textColorDark: #000;
 $titleColor: #342f45;
 $accentColor: #278fb4;
+$accentColorSecondary: #237b9a;
 $bgColor: #126893;
 $borderColorLight: #e8e8e8;
 $borderColorDark: #979797;

@@ -12,9 +12,10 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 50%;
+      width: 40px;
       height: 1px;
       background-color: $borderColorLight;
+      transition: all 0.3s ease-in-out;
     }
 
     @media (max-width: $mobile) {
@@ -121,8 +122,20 @@
     height: 100%;
     border-radius: 50%;
     background-color: rgba($accentColor, 0.4);
-    animation: pulse 1.5s infinite;
     z-index: -1;
+    animation: pulse-btn 1.5s infinite;
+  }
+
+  &--light {
+    background-color: #fff;
+
+    &::before {
+      background-color: rgba(#fff, 0.4);
+    }
+
+    svg {
+      fill: $accentColor;
+    }
   }
 }
 
@@ -150,24 +163,13 @@
 }
 
 .accent-subtitle {
-  color: $accentColor;
-  font-size: 11px;
-  line-height: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  @include accent-subtitle;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.36);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+.fadeOut {
+  animation: fadeOutAnimation var(--animation-duration) ease-in-out;
+}
+
+.fadeIn {
+  animation: fadeInAnimation var(--animation-duration) ease-in;
 }

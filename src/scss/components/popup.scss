@@ -1,0 +1,90 @@
+.popup {
+  position: fixed;
+  right: -100%;
+  bottom: 40px;
+  max-width: 410px;
+  margin-left: 15px;
+  padding: 24px 24px 12px;
+  background-color: #fff;
+  border-radius: 4px 48px 4px 4px;
+  box-shadow: 0 27px 58px 0 rgba(25, 78, 96, 0.14);
+  font-size: 12px;
+  line-height: percent(24, 12);
+  transition: right 1s ease;
+  z-index: 5;
+
+  @media (max-width: $tablet) {
+    bottom: 20px;
+    padding: 16px 16px 10px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    max-width: 100%;
+  }
+
+  &--show {
+    right: 50px;
+
+    @media (max-width: $tablet) {
+      right: 20px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      right: 15px;
+      bottom: 15px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin-bottom: 12px;
+    padding: 0 0 11px 40px;
+    border-bottom: 1px solid rgba($borderColorDark, 0.2);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 27px;
+      height: 21px;
+      background: url('@img/icons/right-quote.svg') center no-repeat;
+    }
+  }
+
+  &__text {
+    @media (max-width: $mobile) {
+      line-height: 20px;
+    }
+  }
+
+  &__profile {
+    flex: 0 0 auto;
+    text-align: center;
+
+    &-img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 4px;
+      border-radius: 50%;
+    }
+
+    &-name {
+      color: #000;
+      font-weight: 700;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #000;
+  }
+
+  &__btn {
+    padding: 12px 25px;
+    height: auto;
+    font-size: inherit;
+  }
+}
