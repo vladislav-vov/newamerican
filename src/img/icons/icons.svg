@@ -3,13 +3,41 @@
 			Created with Pixso.
 	</desc>
 	<defs/>
-	<path id="aShape" d="M1.00002 6.83334C0.539795 6.83334 0.166687 6.46027 0.166687 6.00003C0.166687 5.53979 0.539795 5.16669 1.00002 5.16669L19 5.16669C19.4603 5.16669 19.8334 5.53979 19.8334 6.00003C19.8334 6.46027 19.4603 6.83334 19 6.83334L1.00002 6.83334Z" fill-opacity="1.000000" fill-rule="nonzero"/>
-	<path id="aShape" d="M17.8214 6.00003L13.4107 1.58926C13.0853 1.26382 13.0853 0.736206 13.4107 0.410767C13.7361 0.0853271 14.2638 0.0853271 14.5892 0.410767L19.5892 5.41077C19.9147 5.73621 19.9147 6.26382 19.5892 6.58926L14.5892 11.5893C14.2638 11.9147 13.7361 11.9147 13.4107 11.5893C13.0853 11.2639 13.0853 10.7362 13.4107 10.4108L17.8214 6.00003Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="cShape" d="M1.00002 6.83334C0.539795 6.83334 0.166687 6.46027 0.166687 6.00003C0.166687 5.53979 0.539795 5.16669 1.00002 5.16669L19 5.16669C19.4603 5.16669 19.8334 5.53979 19.8334 6.00003C19.8334 6.46027 19.4603 6.83334 19 6.83334L1.00002 6.83334Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="cShape" d="M17.8214 6.00003L13.4107 1.58926C13.0853 1.26382 13.0853 0.736206 13.4107 0.410767C13.7361 0.0853271 14.2638 0.0853271 14.5892 0.410767L19.5892 5.41077C19.9147 5.73621 19.9147 6.26382 19.5892 6.58926L14.5892 11.5893C14.2638 11.9147 13.7361 11.9147 13.4107 11.5893C13.0853 11.2639 13.0853 10.7362 13.4107 10.4108L17.8214 6.00003Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+</symbol><symbol viewBox="0 0 16 16.0081" id="arrow-left" xmlns="http://www.w3.org/2000/svg">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<path id="aShape" d="M15 8.00403L1 8.00403" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+	<path id="aShape" d="M8 15.004L1 8.00403L8 1.00403" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+</symbol><symbol viewBox="0 0 16 16.0081" id="arrow-right" xmlns="http://www.w3.org/2000/svg">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<path id="bShape" d="M1 8.00403L15 8.00403" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+	<path id="bShape" d="M8 1.00403L15 8.00403L8 15.004" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
 </symbol><symbol viewBox="0 0 11 16" id="play" xmlns="http://www.w3.org/2000/svg">
 	<desc>
 			Created with Pixso.
 	</desc>
 	<defs/>
-	<path id="cTriangle 2" d="M11 8L0 16L0 0L11 8Z" fill-opacity="1.000000" fill-rule="nonzero"/>
-	<path id="cTriangle 2" d="M0 16L0 0L11 8L0 16Z" stroke-opacity="0" stroke-width="0.000000"/>
+	<path id="dTriangle 2" d="M11 8L0 16L0 0L11 8Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="dTriangle 2" d="M0 16L0 0L11 8L0 16Z" stroke-opacity="0" stroke-width="0.000000"/>
+</symbol><symbol viewBox="0 0 15.585 14.8621" id="star" xmlns="http://www.w3.org/2000/svg">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<g opacity="0.100000">
+		<path id="fShape" d="M8.16101 0.244873L10.1434 4.93677L15.2186 5.3728C15.5706 5.40332 15.7138 5.84229 15.4467 6.07349L11.597 9.40869L12.7506 14.3704C12.8306 14.7151 12.457 14.9863 12.1546 14.8032L7.79303 12.1729L3.4314 14.8032C3.12823 14.9856 2.75543 14.7144 2.83545 14.3704L3.98901 9.40869L0.138611 6.07275C-0.128601 5.84155 0.013855 5.40234 0.366638 5.37207L5.44183 4.93604L7.42426 0.244873C7.56183 -0.081543 8.02344 -0.081543 8.16101 0.244873Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</symbol><symbol viewBox="0 0 15.585 14.8622" id="star-fill" xmlns="http://www.w3.org/2000/svg">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<path id="eShape" d="M8.16101 0.244751L10.1434 4.93677L15.2186 5.3728C15.5706 5.4032 15.7138 5.84241 15.4467 6.07361L11.597 9.40881L12.7506 14.3704C12.8306 14.7152 12.457 14.9865 12.1546 14.8032L7.79303 12.1729L3.4314 14.8032C3.12823 14.9856 2.75543 14.7144 2.83545 14.3704L3.98901 9.40881L0.138611 6.07275C-0.128601 5.84155 0.013855 5.40234 0.366638 5.37195L5.44183 4.93604L7.42426 0.244751C7.56183 -0.081543 8.02344 -0.081543 8.16101 0.244751Z" fill-opacity="1.000000" fill-rule="nonzero"/>
 </symbol></svg>
