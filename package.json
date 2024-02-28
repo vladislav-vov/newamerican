@@ -64,6 +64,7 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
-    "gulp-cheerio": "^1.0.0"
+    "gulp-cheerio": "^1.0.0",
+    "swiper": "^11.0.7"
   }
 }
