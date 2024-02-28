@@ -364,7 +364,6 @@
 
   &__body {
     display: flex;
-    justify-content: center;
     align-items: flex-end;
     gap: 34px;
     margin-top: -50px;
@@ -426,13 +425,13 @@
     flex-direction: column;
     justify-content: flex-end;
     gap: 60px;
+    padding: 0 30px 0 40px;
   }
 
   &__slider-wrapper {
     position: relative;
     display: flex;
-    gap: 30px;
-    padding: 0 0 40px 40px;
+    padding: 0 0 40px 0;
 
     &::before {
       content: '';
