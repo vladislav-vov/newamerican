@@ -61,6 +61,10 @@ export function scrollToElement(selector) {
   }
 }
 
+export function removeUnits(value) {
+  return parseFloat(value.replace(/[^\d.-]/g, ''));
+}
+
 export let isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);

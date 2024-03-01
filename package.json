@@ -7,7 +7,8 @@
   "license": "",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"gulp\" \"webpack serve --progress -c config/webpack.dev.js\" \"json-server data.json\"",
+    "dev": "concurrently \"gulp\" \"webpack serve --progress -c config/webpack.dev.js\" \"nodemon server/index.js\"",
+    "server": "nodemon server/index.js",
     "build": "gulp build --build",
     "sprite": "gulp sprite",
     "fonts": "gulp fonts --rewrite",
@@ -50,8 +51,8 @@
     "gulp-webp-html-nosvg": "latest",
     "gulp-webpcss": "latest",
     "gulp-zip": "latest",
-    "json-server": "^1.0.0-alpha.23",
     "mini-css-extract-plugin": "2.4.7",
+    "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
     "sass": "latest",
     "sass-loader": "latest",
@@ -64,6 +65,9 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
     "gulp-cheerio": "^1.0.0",
     "swiper": "^11.0.7"
   }

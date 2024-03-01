@@ -3,7 +3,10 @@ import {
   removeExcessElements,
   scrollToElement,
   isMobile,
+  removeUnits,
 } from '../helpers/functions.js';
+
+import { rootStyles } from '../utils/constants.js';
 
 function stepNavigation() {
   const stepsContainer = document.querySelector('.tutorials__steps');
@@ -16,10 +19,9 @@ function stepNavigation() {
     document.querySelectorAll('.tutorials__content-block'),
   );
 
-  const rootStyles = getComputedStyle(document.documentElement);
-  const animationTime = rootStyles
-    .getPropertyValue('--animation-duration')
-    .replace(/\D/g, '');
+  const animationTime = removeUnits(
+    rootStyles.getPropertyValue('--animation-duration'),
+  );
 
   const dots = [];
   const classes = {

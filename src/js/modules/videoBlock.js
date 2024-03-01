@@ -1,5 +1,7 @@
 import { parseDurationISO, formatTime } from '../helpers/functions.js';
 
+import { baseUrl } from '../utils/constants.js';
+
 function updateVideoBlocksTime() {
   const videoBlocks = document.querySelectorAll('[data-video-block]');
 
@@ -10,12 +12,9 @@ function updateVideoBlocksTime() {
 
       timeBlock.textContent = '0:00';
 
-      const apiKey = 'AIzaSyDiZlApJHg0WGNzxQ_UKNSKG7O12JQGgmA';
       const videoId = url.match(/[?]v=([^&?]+)/)[1];
 
-      fetch(
-        `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${apiKey}&part=contentDetails`,
-      )
+      fetch(`${baseUrl}/youtube-api/${videoId}`)
         .then((response) => response.json())
         .then((data) => {
           const durationISO = data.items[0].contentDetails.duration;

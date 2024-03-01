@@ -1,10 +1,12 @@
+import { baseUrl } from '../utils/constants.js';
+
 function fetchMentors() {
   const mentorsContainer = document.querySelector('.mentors__cards');
 
-  fetch('http://localhost:3000/mentors')
+  fetch(`${baseUrl}/mentors`)
     .then((res) => res.json())
     .then((data) => {
-      data.forEach((mentor) => {
+      data.mentors.forEach((mentor) => {
         const { name, title, text, thumbnail, videoUrl, skills } = mentor;
 
         const skillsList = skills
