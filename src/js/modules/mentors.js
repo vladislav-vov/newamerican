@@ -1,7 +1,11 @@
 import { baseUrl } from '../utils/constants.js';
 
+import { protectModule } from '../helpers/functions.js';
+
 function fetchMentors() {
   const mentorsContainer = document.querySelector('.mentors__cards');
+
+  if (!mentorsContainer) return;
 
   fetch(`${baseUrl}/mentors`)
     .then((res) => res.json())
@@ -55,7 +59,10 @@ function fetchMentors() {
 
         mentorsContainer.innerHTML += card;
       });
+    })
+    .catch((error) => {
+      console.error('An error occurred during fetch:', error.message);
     });
 }
 
-export default fetchMentors;
+export default protectModule(fetchMentors);

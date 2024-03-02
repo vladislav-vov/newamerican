@@ -1,4 +1,8 @@
-import { parseDurationISO, formatTime } from '../helpers/functions.js';
+import {
+  parseDurationISO,
+  formatTime,
+  protectModule,
+} from '../helpers/functions.js';
 
 import { baseUrl } from '../utils/constants.js';
 
@@ -28,4 +32,4 @@ function updateVideoBlocksTime() {
   }
 }
 
-export default updateVideoBlocksTime;
+export default protectModule(updateVideoBlocksTime);

@@ -4,6 +4,7 @@ import {
   scrollToElement,
   isMobile,
   removeUnits,
+  protectModule,
 } from '../helpers/functions.js';
 
 import { rootStyles } from '../utils/constants.js';
@@ -201,4 +202,4 @@ function stepNavigation() {
   });
 }
 
-export default stepNavigation;
+export default protectModule(stepNavigation);

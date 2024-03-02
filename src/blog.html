@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Blog"
+})
+
+<body>
+  @@include('html/_header.html')
+
+  <div class="blog-promo">
+    <div class="container">
+      <img src="@img/blog/1.png" alt="Image">
+    </div>
+  </div>
+
+  <div class="section container grid">
+    @@include('html/_video-block.html', {
+    "class": "",
+    "src": "img/tutorials/1.png",
+    "text": "The difference between «fixed rate» and «adjustable»",
+    "link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+    })
+    @@include('html/_video-block.html', {
+    "class": "",
+    "src": "img/tutorials/1.png",
+    "text": "The difference between «fixed rate» and «adjustable»",
+    "link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+    })
+    @@include('html/_video-block.html', {
+    "class": "",
+    "src": "img/tutorials/1.png",
+    "text": "The difference between «fixed rate» and «adjustable»",
+    "link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+    })
+    @@include('html/_video-block.html', {
+    "class": "",
+    "src": "img/tutorials/1.png",
+    "text": "The difference between «fixed rate» and «adjustable»",
+    "link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+    })
+    @@include('html/_video-block.html', {
+    "class": "",
+    "src": "img/tutorials/1.png",
+    "text": "The difference between «fixed rate» and «adjustable»",
+    "link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+    })
+    @@include('html/_video-block.html', {
+    "class": "",
+    "src": "img/tutorials/1.png",
+    "text": "The difference between «fixed rate» and «adjustable»",
+    "link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+    })
+    @@include('html/_video-block.html', {
+    "class": "",
+    "src": "img/tutorials/1.png",
+    "text": "The difference between «fixed rate» and «adjustable»",
+    "link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+    })
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="title title--h2 mb-20">Resources</h2>
+      <div class="grid">
+        <article class="resource-item">
+          <div class="resource-item__body">
+            <img src="@img/resources/book.jpeg" alt="Book">
+            <div>
+              <div class="resource-item__subtitle accent-subtitle">Resourses</div>
+              <h4 class="title title--h4">9 Things You Must Know About Buying Your First Home</h4>
+            </div>
+          </div>
+          <div class="resource-item__footer">
+            <button data-download="Summary.pdf" class="button button--animated">
+              Download
+              <svg width="16" height="16">
+                <use xlink:href="@img/icons/icons.svg#arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+        </article>
+        <article class="resource-item">
+          <div class="resource-item__body">
+            <img src="@img/resources/webinar.jpeg" alt="Book">
+            <div>
+              <div class="resource-item__subtitle accent-subtitle">Resourses</div>
+              <h4 class="title title--h4">Webinar name</h4>
+            </div>
+          </div>
+          <div class="resource-item__footer">
+            <a href="https://youtube.com" target="_blank" class="play">
+              <svg width="24" height="18">
+                <use xlink:href="@img/icons/icons.svg#eye"></use>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="title title--h2 mb-20">Education</h2>
+      <div class="grid">
+        <a href="#" class="blog-article blog-article--fw">
+          <img class="blog-article__bg" src="@img/education/1.jpeg" alt="Image">
+          <div class="blog-article__tag accent-subtitle">blog</div>
+          <div class="blog-article__content">
+            <h3 class="blog-article__title title title--h3">Article #1</h3>
+            <div class="blog-article__text">
+              <p>Terms of your offer, how quickly you can turn things around and who your lenders is advising.</p>
+            </div>
+          </div>
+          <div class="blog-article__author">
+            <div class="blog-article__avatar">
+              <img src="@img/mentors/avatar-1.jpeg" alt="Avatar">
+            </div>
+            <div>
+              <div>by</div>
+              <div class="blog-article__name">Justin Roberts</div>
+            </div>
+          </div>
+        </a>
+        @@include('html/_blog-article.html', {
+        "title": "Article #4",
+        "text": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+        "author": "Justin Roberts",
+        "avatar": "img/mentors/avatar-1.jpeg"
+        })
+        @@include('html/_blog-article.html', {
+        "title": "Article #2",
+        "text": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+        "author": "Justin Roberts",
+        "avatar": "img/mentors/avatar-1.jpeg"
+        })
+        @@include('html/_blog-article.html', {
+        "title": "Article #3",
+        "text": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+        "author": "Justin Roberts",
+        "avatar": "img/mentors/avatar-1.jpeg"
+        })
+        @@include('html/_blog-article.html', {
+        "title": "Article #5",
+        "text": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+        "author": "Justin Roberts",
+        "avatar": "img/mentors/avatar-1.jpeg"
+        })
+        @@include('html/_blog-article.html', {
+        "title": "Article #6",
+        "text": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+        "author": "Justin Roberts",
+        "avatar": "img/mentors/avatar-1.jpeg"
+        })
+        <a href="#" class="blog-article blog-article--fw">
+          <img class="blog-article__bg" src="@img/education/1.jpeg" alt="Image">
+          <div class="blog-article__tag accent-subtitle">blog</div>
+          <div class="blog-article__content">
+            <h3 class="blog-article__title title title--h3">Article #7</h3>
+            <div class="blog-article__text">
+              <p>Terms of your offer, how quickly you can turn things around and who your lenders is advising.</p>
+            </div>
+          </div>
+          <div class="blog-article__author">
+            <div class="blog-article__avatar">
+              <img src="@img/mentors/avatar-1.jpeg" alt="Avatar">
+            </div>
+            <div>
+              <div>by</div>
+              <div class="blog-article__name">Justin Roberts</div>
+            </div>
+          </div>
+        </a>
+        @@include('html/_blog-article.html', {
+        "title": "Article #8",
+        "text": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+        "author": "Justin Roberts",
+        "avatar": "img/mentors/avatar-1.jpeg"
+        })
+        @@include('html/_blog-article.html', {
+        "title": "Article #9",
+        "text": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+        "author": "Justin Roberts",
+        "avatar": "img/mentors/avatar-1.jpeg"
+        })
+        @@include('html/_blog-article.html', {
+        "title": "Article #10",
+        "text": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+        "author": "Justin Roberts",
+        "avatar": "img/mentors/avatar-1.jpeg"
+        })
+      </div>
+    </div>
+  </section>
+
+  @@include('html/_footer.htm')
+
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

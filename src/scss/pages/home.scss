@@ -1,5 +1,5 @@
 .promo {
-  @include adaptiveValue('padding-bottom', 100, 40);
+  @extend %section;
 
   &__inner {
     min-height: 100vh;
@@ -151,7 +151,7 @@
 }
 
 .mentors {
-  @include adaptiveValue('padding-bottom', 100, 40);
+  @extend %section;
 
   &__head {
     @include adaptiveValue('margin-bottom', 65, 30);
@@ -176,7 +176,7 @@
 }
 
 .tutorials {
-  @include adaptiveValue('padding-bottom', 90, 40);
+  @extend %section;
 
   &__container {
     @include adaptiveValue('padding-left', 59, 40, $containerWidth, 992);
@@ -337,6 +337,9 @@
   }
 
   &__video-block {
+    min-height: 234px;
+    aspect-ratio: auto;
+
     @media (min-width: $mobile) {
       &:nth-child(1) {
         grid-column: span 2;
@@ -356,7 +359,7 @@
 }
 
 .reviews {
-  @include adaptiveValue('padding-bottom', 126, 40);
+  @extend %section;
 
   &__head {
     @media (min-width: $tablet) {
@@ -567,7 +570,7 @@
 }
 
 .learnings {
-  @include adaptiveValue('padding-bottom', 96, 40);
+  @extend %section;
 
   &__container {
     display: grid;
@@ -575,37 +578,6 @@
     gap: 24px;
 
     @media (max-width: 1137px) {
-      grid-template-columns: 1fr;
-    }
-  }
-}
-
-.resources {
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 24px;
-
-    @media (max-width: $mobileSmall) {
-      grid-template-columns: 1fr;
-    }
-  }
-}
-
-.education {
-  &__head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    gap: 24px;
-
-    @media (max-width: $mobileSmall) {
       grid-template-columns: 1fr;
     }
   }

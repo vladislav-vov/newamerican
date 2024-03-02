@@ -5,4 +5,4 @@ export { default as stepNavigation } from './stepsNavigation.js';
 export { default as popup } from './popup.js';
 export { default as rating } from './rating.js';
 export { default as slider } from './slider.js';
-export { default as Download } from './download.js';
+export { default as download } from './download.js';

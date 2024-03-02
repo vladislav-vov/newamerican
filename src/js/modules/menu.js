@@ -1,5 +1,7 @@
 import { calcScroll } from '../helpers/functions.js';
 
+import { protectModule } from '../helpers/functions.js';
+
 function menu() {
   const menuBtn = document.querySelector('.menu-btn');
   const menuClose = document.querySelector('.menu__close');
@@ -28,4 +30,4 @@ function menu() {
   });
 }
 
-export default menu;
+export default protectModule(menu);

@@ -65,6 +65,19 @@ export function removeUnits(value) {
   return parseFloat(value.replace(/[^\d.-]/g, ''));
 }
 
+export function protectModule(moduleFunction) {
+  return function (...args) {
+    try {
+      return moduleFunction.apply(this, args);
+    } catch (error) {
+      console.error(
+        `An error occurred in the module: ${moduleFunction.name}`,
+        error.message,
+      );
+    }
+  };
+}
+
 export let isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);

@@ -1,11 +1,23 @@
 import { baseUrl } from '../utils/constants.js';
 
-class Download {
-  constructor(selector) {
-    this.btns = document.querySelectorAll(selector);
-  }
+import { protectModule } from '../helpers/functions.js';
 
-  async downloadItem(file) {
+function download(selector) {
+  const btns = document.querySelectorAll(selector);
+
+  if (!btns) return;
+
+  btns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      const file = e.target.getAttribute('data-download');
+
+      downloadItem(file);
+    });
+  });
+
+  async function downloadItem(file) {
     try {
       const response = await fetch(`${baseUrl}/files/${file}`);
 
@@ -31,18 +43,6 @@ class Download {
       console.error(`Error downloading file: ${error.message}`);
     }
   }
-
-  init() {
-    this.btns.forEach((btn) => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-
-        const file = e.target.getAttribute('data-download');
-
-        this.downloadItem(file);
-      });
-    });
-  }
 }
 
-export default Download;
+export default protectModule(download);

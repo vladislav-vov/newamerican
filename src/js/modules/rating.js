@@ -1,5 +1,7 @@
 import { setElementStyles } from '../helpers/functions.js';
 
+import { protectModule } from '../helpers/functions.js';
+
 function rating() {
   function createRating(ratingContainer, totalElem) {
     const stars = ratingContainer.querySelectorAll('svg');
@@ -62,4 +64,4 @@ function rating() {
   });
 }
 
-export default rating;
+export default protectModule(rating);

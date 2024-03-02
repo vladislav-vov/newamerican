@@ -139,73 +139,46 @@
 				</div>
 				<div class="tutorials__content">
 					<div class="tutorials__content-block">
-						<div data-video-block class="tutorials__video-block video-block">
-							<img class="video-block__img" src="@img/tutorials/1.png" alt="Image">
-							<a href="https://www.youtube.com/watch?v=RLgUEEAgvMg" target="_blank" class="play play--light">
-								<svg width="11" height="16">
-									<use xlink:href="@img/icons/icons.svg#play"></use>
-								</svg>
-							</a>
-							<p class="video-block__text">The difference between «fixed rate»
-								and «adjustable»</p>
-							<div class="time"></div>
-						</div>
-						<div data-video-block class="tutorials__video-block video-block">
-							<img class="video-block__img" src="@img/tutorials/1.png" alt="Image">
-							<a href="https://www.youtube.com/watch?v=RLgUEEAgvMg" target="_blank" class="play play--light">
-								<svg width="11" height="16">
-									<use xlink:href="@img/icons/icons.svg#play"></use>
-								</svg>
-							</a>
-							<p class="video-block__text">What are points and credits?</p>
-							<div class="time"></div>
-						</div>
-						<div data-video-block class="tutorials__video-block video-block">
-							<img class="video-block__img" src="@img/tutorials/1.png" alt="Image">
-							<a href="https://www.youtube.com/watch?v=RLgUEEAgvMg" target="_blank" class="play play--light">
-								<svg width="11" height="16">
-									<use xlink:href="@img/icons/icons.svg#play"></use>
-								</svg>
-							</a>
-							<p class="video-block__text">What are points and credits?</p>
-							<div class="time"></div>
-						</div>
+						@@include('html/_video-block.html', {
+						"class": "tutorials__video-block",
+						"src": "img/tutorials/1.png",
+						"text": "The difference between «fixed rate» and «adjustable»",
+						"link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+						})
+						@@include('html/_video-block.html', {
+						"class": "tutorials__video-block",
+						"src": "img/tutorials/1.png",
+						"text": "The difference between «fixed rate» and «adjustable»",
+						"link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+						})
+						@@include('html/_video-block.html', {
+						"class": "tutorials__video-block",
+						"src": "img/tutorials/1.png",
+						"text": "The difference between «fixed rate» and «adjustable»",
+						"link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+						})
 					</div>
 					<div class="tutorials__content-block">
-						<div data-video-block class="tutorials__video-block video-block">
-							<img class="video-block__img" src="@img/tutorials/1.png" alt="Image">
-							<a href="https://www.youtube.com/watch?v=RLgUEEAgvMg" target="_blank" class="play play--light">
-								<svg width="11" height="16">
-									<use xlink:href="@img/icons/icons.svg#play"></use>
-								</svg>
-							</a>
-							<p class="video-block__text">The difference between «fixed rate»
-								and «adjustable»</p>
-							<div class="time"></div>
-						</div>
-						<div data-video-block class="tutorials__video-block video-block">
-							<img class="video-block__img" src="@img/tutorials/1.png" alt="Image">
-							<a href="https://www.youtube.com/watch?v=RLgUEEAgvMg" target="_blank" class="play play--light">
-								<svg width="11" height="16">
-									<use xlink:href="@img/icons/icons.svg#play"></use>
-								</svg>
-							</a>
-							<p class="video-block__text">What are points and credits?</p>
-							<div class="time"></div>
-						</div>
+						@@include('html/_video-block.html', {
+						"class": "tutorials__video-block",
+						"src": "img/tutorials/1.png",
+						"text": "The difference between «fixed rate» and «adjustable»",
+						"link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+						})
+						@@include('html/_video-block.html', {
+						"class": "tutorials__video-block",
+						"src": "img/tutorials/1.png",
+						"text": "The difference between «fixed rate» and «adjustable»",
+						"link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+						})
 					</div>
 					<div class="tutorials__content-block">
-						<div data-video-block class="tutorials__video-block video-block">
-							<img class="video-block__img" src="@img/tutorials/1.png" alt="Image">
-							<a href="https://www.youtube.com/watch?v=RLgUEEAgvMg" target="_blank" class="play play--light">
-								<svg width="11" height="16">
-									<use xlink:href="@img/icons/icons.svg#play"></use>
-								</svg>
-							</a>
-							<p class="video-block__text">The difference between «fixed rate»
-								and «adjustable»</p>
-							<div class="time"></div>
-						</div>
+						@@include('html/_video-block.html', {
+						"class": "tutorials__video-block",
+						"src": "img/tutorials/1.png",
+						"text": "The difference between «fixed rate» and «adjustable»",
+						"link": "https://www.youtube.com/watch?v=RLgUEEAgvMg"
+						})
 					</div>
 				</div>
 			</div>
@@ -299,12 +272,12 @@
 	</section>
 	<div class="learnings">
 		<div class="learnings__container">
-			<section class="education">
-				<div class="education__head mb-20">
+			<section>
+				<div class="row row-space row-20 row-wrap mb-20">
 					<h2 class="title title--h2">Education</h2>
 					<a href="#" class="link">All articles</a>
 				</div>
-				<div class="education__items">
+				<div class="grid">
 					<a href="#" class="blog-article blog-article--fw">
 						<img class="blog-article__bg" src="@img/education/1.jpeg" alt="Image">
 						<div class="blog-article__tag accent-subtitle">blog</div>
@@ -338,9 +311,9 @@
 					})
 				</div>
 			</section>
-			<section class="resources">
+			<section>
 				<h2 class="title title--h2 mb-20">Resources</h2>
-				<div class="resources__items">
+				<div class="grid">
 					<article class="resource-item">
 						<div class="resource-item__body">
 							<img src="@img/resources/book.jpeg" alt="Book">

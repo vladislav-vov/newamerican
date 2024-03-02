@@ -1,0 +1,10 @@
+.header {
+  padding-top: 24px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 1392px;
+  }
+}

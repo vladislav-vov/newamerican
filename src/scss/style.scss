@@ -10,6 +10,7 @@
 @import './base/animations';
 @import './base/common';
 
+@import './components/header';
 @import './components/menu';
 @import './components/mentor-card';
 @import './components/tutorials-step';
@@ -22,3 +23,4 @@
 @import './components/footer';
 
 @import './pages/home';
+@import './pages/blog';

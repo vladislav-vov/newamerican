@@ -222,6 +222,10 @@
     justify-content: center;
   }
 
+  &-space {
+    justify-content: space-between;
+  }
+
   &-20 {
     gap: 20px;
   }
@@ -233,6 +237,12 @@
 
 .mb-20 {
   margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
 }
 
 .link {
@@ -253,6 +263,14 @@
     height: 1px;
     background-color: $accentColor;
   }
+}
+
+%section {
+  @include adaptiveValue('padding-bottom', 100, 40);
+}
+
+.section {
+  @extend %section;
 }
 
 .accent-subtitle {

@@ -8,7 +8,7 @@ import {
   popup,
   rating,
   slider,
-  Download,
+  download,
 } from './modules/index.js';
 
 import '../scss/style.scss';
@@ -18,8 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
   fetchMentors();
   updateVideoBlocksTime();
   stepNavigation();
-  // popup();
+  popup();
   rating();
   slider();
-  new Download('[data-download]').init();
+  download('[data-download]');
 });

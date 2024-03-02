@@ -3,19 +3,26 @@ import { Navigation, Pagination, Manipulation } from 'swiper/modules';
 
 import { rootStyles, baseUrl } from '../utils/constants.js';
 
-import { removeUnits, setElementStyles } from '../helpers/functions.js';
+import {
+  removeUnits,
+  setElementStyles,
+  protectModule,
+} from '../helpers/functions.js';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 function slider() {
   const section = document.querySelector('.reviews');
-  const slider = document.querySelector('.reviews__slider');
-  const items = document.querySelector('.reviews__items');
-  const sliderActionsBlock = document.querySelector('.reviews__slider-actions');
-  const reviewsBody = document.querySelector('.reviews__body');
-  const currentSlide = document.querySelector('.reviews__slider-current');
-  const totalSlides = document.querySelector('.reviews__slider-total');
+
+  if (!section) return;
+
+  const slider = section.querySelector('.reviews__slider');
+  const items = section.querySelector('.reviews__items');
+  const sliderActionsBlock = section.querySelector('.reviews__slider-actions');
+  const reviewsBody = section.querySelector('.reviews__body');
+  const currentSlide = section.querySelector('.reviews__slider-current');
+  const totalSlides = section.querySelector('.reviews__slider-total');
 
   const containerWidth = rootStyles.getPropertyValue('--containerWidth');
   const containerPadding = rootStyles.getPropertyValue('--containerPadding');
@@ -168,4 +175,4 @@ function slider() {
   window.addEventListener('resize', handleResize);
 }
 
-export default slider;
+export default protectModule(slider);
