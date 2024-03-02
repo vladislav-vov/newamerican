@@ -265,6 +265,13 @@
   }
 }
 
+.author {
+  color: rgba(#fff, 9.7);
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+}
+
 %section {
   @include adaptiveValue('padding-bottom', 100, 40);
 }

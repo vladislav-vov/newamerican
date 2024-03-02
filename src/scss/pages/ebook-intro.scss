@@ -1,0 +1,92 @@
+.intro-promo {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: $mobileSmall) {
+    margin-bottom: 30px;
+  }
+
+  &__container {
+    max-width: 676px;
+    @include adaptiveValue('padding-top', 200, 120);
+  }
+
+  &__title {
+    max-width: 440px;
+    color: #fff;
+  }
+}
+
+.intro {
+  @extend %section;
+
+  &__container {
+    max-width: 676px;
+  }
+
+  &__head {
+    margin-bottom: 50px;
+
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    color: rgba(#000, 0.8);
+    font-size: 16px;
+    line-height: percent(26, 16);
+
+    p:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__article {
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__article-text {
+    margin-bottom: 30px;
+
+    p:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 20px;
+
+      p:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__article-img {
+    object-fit: cover;
+  }
+}
+
+.more {
+  @extend %section;
+
+  &__title {
+    margin-bottom: 35px;
+    text-align: center;
+
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 25px;
+    }
+  }
+}

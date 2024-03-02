@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Blog"
+})
+
+<body>
+  <section class="intro-promo" style="background-image: url(../img/ebook/promo-bg.jpeg);">
+    @@include('html/_header.html', {
+    "logoSrc": "img/logo-light.png"
+    })
+    <div class="intro-promo__container">
+      <h1 class="intro-promo__title title title--h1 mb-20">9 Things You Must Know About Buying Your First Home</h1>
+      <div class="author">Scott Johnson</div>
+    </div>
+  </section>
+  <section class="intro">
+    <div class="intro__container">
+      <div class="intro__head">
+        <h2 class="title title--h2 mb-20">What’s in the report</h2>
+        <div class="intro__text">
+          <p>
+            So you’re about to get into the world of homeownership. It’s okay...everyone feels lost during this process,
+            but the more preparation you do upfront, the smoother your journey will be.
+          </p>
+        </div>
+      </div>
+      <article class="intro__article">
+        <h3 class="title title--h3 mb-20">1st thing</h3>
+        <div class="intro__article-text">
+          <p>
+            So you’re about to get into the world of homeownership. It’s okay...everyone feels lost during this process,
+            but the more preparation you do upfront, the smoother your journey will be. So you’re about to get into the
+            world of homeownership. It’s okay...everyone feels lost during this process, but the more preparation you do
+            upfront, the smoother your journey will be.So you’re about to get into the world of homeownership. It’s
+            okay...everyone feels lost during this process, but the more preparation you do upfront, the smoother your
+            journey will be.So you’re about to get into the world of homeownership. I
+          </p>
+        </div>
+        <img src="@img/ebook-intro/1.jpeg" alt="" class="intro__article-img">
+      </article>
+      <article class="intro__article">
+        <h3 class="title title--h3 mb-20">2nd thing</h3>
+        <div class="intro__article-text">
+          <p>
+            So you’re about to get into the world of homeownership. It’s okay...everyone feels lost during this process,
+            but the more preparation you do upfront, the smoother your journey will be. So you’re about to get into the
+            world of homeownership. It’s okay...everyone feels lost during this process, but the more preparation you do
+            upfront, the smoother your journey will be.So you’re about to get into the world of homeownership. It’s
+            okay...everyone feels lost during this process, but the more preparation you do upfront, the smoother your
+            journey will be.So you’re about to get into the world of homeownership. I
+          </p>
+        </div>
+        <img src="@img/ebook-intro/2.jpeg" alt="" class="intro__article-img">
+      </article>
+    </div>
+  </section>
+  <section class="more">
+    <div class="container">
+      <h2 class="more__title title title--h2">More articles</h2>
+      <div class="grid">
+        @@include('html/_blog-article.html', {
+        "title": "Article #8",
+        "text": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+        "author": "Justin Roberts",
+        "avatar": "img/mentors/avatar-1.jpeg"
+        })
+        @@include('html/_blog-article.html', {
+        "title": "Article #9",
+        "text": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+        "author": "Justin Roberts",
+        "avatar": "img/mentors/avatar-1.jpeg"
+        })
+        @@include('html/_blog-article.html', {
+        "title": "Article #10",
+        "text": "Terms of your offer, how quickly you can turn things around and who your lenders is advising.",
+        "author": "Justin Roberts",
+        "avatar": "img/mentors/avatar-1.jpeg"
+        })
+      </div>
+    </div>
+  </section>
+
+  @@include('html/_footer.htm')
+
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
