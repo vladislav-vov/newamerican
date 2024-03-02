@@ -7,7 +7,7 @@ import cors from 'cors';
 import 'dotenv/config';
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT;
 const __dirname = path.resolve();
 
 app.use(
@@ -27,6 +27,20 @@ app.get('/:data', async (req, res) => {
   } catch (error) {
     console.error(`Error reading ${dataType} data:`, error);
     res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+app.get('/files/:file', async (req, res) => {
+  const file = req.params.file;
+  const filePath = path.join(__dirname, 'server', 'db', 'files', `${file}`);
+
+  try {
+    await fs.access(filePath);
+
+    res.sendFile(filePath);
+  } catch (error) {
+    console.error(`Error reading ${filePath} data:`, error);
+    res.status(404).json({ error: 'File not found' });
   }
 });
 

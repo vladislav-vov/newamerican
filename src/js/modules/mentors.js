@@ -28,7 +28,7 @@ function fetchMentors() {
               <img src="${thumbnail}" alt="Portrait of ${name}">
               <div class="mentor-card__action">
                 <a href="${videoUrl}" target="_blank" class="play">
-                  <svg>
+                  <svg width="11" height="16">
                     <use xlink:href="img/icons/icons.svg#play"></use>
                   </svg>
                 </a>

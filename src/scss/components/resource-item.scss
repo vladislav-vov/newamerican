@@ -1,0 +1,35 @@
+.resource-item {
+  padding: 28px 32px;
+  box-shadow: 0 27px 58px 0 rgba(25, 78, 96, 0.14);
+
+  @media (max-width: $tablet) {
+    padding: 25px;
+  }
+
+  &__body {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 17px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid rgba($borderColorDark, 0.2);
+
+    @media (max-width: $tablet) {
+      padding-top: 15px;
+    }
+  }
+}

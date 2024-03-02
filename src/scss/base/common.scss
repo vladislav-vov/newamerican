@@ -38,9 +38,19 @@
     line-height: 1;
   }
 
+  &--h4 {
+    @include adaptiveValue('font-size', 20, 16);
+    line-height: percent(26, 20);
+  }
+
   &--h5 {
     font-size: 16px;
     line-height: percent(28, 16);
+  }
+
+  &--h6 {
+    font-size: 15px;
+    line-height: percent(18, 15);
   }
 
   &--light {
@@ -94,6 +104,62 @@
       }
     }
   }
+
+  &--light {
+    background-color: rgba(#fff, 0.2);
+
+    @media (any-hover: hover) {
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $accentColor;
+      }
+    }
+  }
+
+  &--animated {
+    position: relative;
+    height: auto;
+    padding: 12px 14px 12px 29px;
+    gap: 14px;
+    border-radius: 22px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      background-color: rgba($accentColor, 0.4);
+      z-index: -1;
+      animation: btn-animation 1s infinite;
+      transition:
+        width 0.3s linear,
+        height 0.3s linear,
+        transform 0.3s linear;
+      transform-origin: top left;
+    }
+
+    @keyframes btn-animation {
+      0% {
+        transform: translate(0, 0);
+        width: 100%;
+        height: 100%;
+      }
+      50% {
+        transform: translate(-4%, -12%);
+        width: 109%;
+        height: 130%;
+      }
+      100% {
+        transform: translate(0, 0);
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 }
 
 .play {
@@ -110,8 +176,6 @@
 
   svg {
     fill: #fff;
-    width: 11px;
-    height: 16px;
   }
 
   &::before {
@@ -150,16 +214,44 @@
   display: flex;
   align-items: center;
 
-  &--wrap {
+  &-wrap {
     flex-wrap: wrap;
   }
 
-  &--center {
+  &-center {
     justify-content: center;
   }
 
-  &--20 {
+  &-20 {
     gap: 20px;
+  }
+}
+
+.icon-play {
+  fill: #fff;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.link {
+  position: relative;
+  margin-left: 5px;
+  padding-bottom: 2px;
+  color: $accentColor;
+  font-size: 14px;
+  line-height: percent(16, 14);
+  font-weight: 700;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $accentColor;
   }
 }
 

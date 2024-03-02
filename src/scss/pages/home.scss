@@ -420,26 +420,6 @@
     text-transform: uppercase;
   }
 
-  &__item-link {
-    position: relative;
-    margin-left: 5px;
-    padding-bottom: 2px;
-    color: $accentColor;
-    font-size: 14px;
-    line-height: percent(16, 14);
-    font-weight: 700;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background-color: $accentColor;
-    }
-  }
-
   &__slider-actions {
     display: flex;
     padding: 0 30px 0 40px;
@@ -518,11 +498,6 @@
         margin-bottom: 24px;
       }
     }
-
-    svg {
-      width: 25px;
-      height: 25px;
-    }
   }
 
   &__slider-slide {
@@ -587,6 +562,51 @@
         z-index: -1;
         animation: pulse-dot 1.5s infinite;
       }
+    }
+  }
+}
+
+.learnings {
+  @include adaptiveValue('padding-bottom', 96, 40);
+
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(auto, 818px) minmax(auto, 397px);
+    gap: 24px;
+
+    @media (max-width: 1137px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.resources {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.education {
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 24px;
+
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: 1fr;
     }
   }
 }

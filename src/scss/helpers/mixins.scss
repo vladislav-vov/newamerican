@@ -4,6 +4,7 @@
   line-height: 13px;
   font-weight: 700;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 @mixin pulse($name, $scale) {

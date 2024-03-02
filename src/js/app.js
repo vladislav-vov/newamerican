@@ -8,6 +8,7 @@ import {
   popup,
   rating,
   slider,
+  Download,
 } from './modules/index.js';
 
 import '../scss/style.scss';
@@ -20,4 +21,5 @@ window.addEventListener('DOMContentLoaded', () => {
   // popup();
   rating();
   slider();
+  new Download('[data-download]').init();
 });
