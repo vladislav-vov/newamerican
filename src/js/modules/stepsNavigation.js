@@ -20,6 +20,12 @@ function stepNavigation() {
     document.querySelectorAll('.tutorials__content-block'),
   );
 
+  if (!stepsContainer || !steps.length || !contentBlocks.length) {
+    throw new Error(
+      'Error in the stepNavigation function: missing elements - stepsContainer, steps, or contentBlocks',
+    );
+  }
+
   const animationTime = removeUnits(
     rootStyles.getPropertyValue('--animation-duration'),
   );
