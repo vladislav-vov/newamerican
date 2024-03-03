@@ -23,7 +23,7 @@ $mobileSmall: 479.98px;
 :root {
   --animation-duration: 500ms;
   --maxContainerWidth: #{$maxWidthContainer};
-  --containerPadding: #{$containerPadding};
+  --containerPadding: #{$containerPadding}px;
   --containerWidth: #{$containerWidth};
   --tablet: #{$tablet};
   --mobileSmall: #{$mobileSmall};

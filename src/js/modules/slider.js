@@ -25,7 +25,9 @@ function slider() {
   const totalSlides = section.querySelector('.reviews__slider-total');
 
   const containerWidth = rootStyles.getPropertyValue('--containerWidth');
-  const containerPadding = rootStyles.getPropertyValue('--containerPadding');
+  const containerPadding = removeUnits(
+    rootStyles.getPropertyValue('--containerPadding'),
+  );
   const tablet = removeUnits(rootStyles.getPropertyValue('--tablet'));
   const mobile = removeUnits(rootStyles.getPropertyValue('--mobileSmall'));
 
