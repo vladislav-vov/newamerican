@@ -24,6 +24,7 @@ function stepNavigation() {
     rootStyles.getPropertyValue('--animation-duration'),
   );
 
+  let currentContentBlockIndex = 0;
   const dots = [];
   const classes = {
     stepActive: 'tutorials__step--active',
@@ -125,6 +126,7 @@ function stepNavigation() {
       block.classList.toggle(classes.fadeIn, i === index);
       setTimeout(() => {
         block.style.display = i === index ? 'grid' : 'none';
+        currentContentBlockIndex = index;
       }, animationTime);
     });
   }
@@ -152,6 +154,16 @@ function stepNavigation() {
     dots.forEach((dot) => dot.classList.remove(classes.dotHover));
   }
 
+  function adjustContentHeight(index) {
+    const contentWrapper = document.querySelector('.tutorials__content');
+
+    setTimeout(() => {
+      const currentContentBlockHeight = contentBlocks[index].offsetHeight;
+
+      contentWrapper.style.height = currentContentBlockHeight + 'px';
+    }, animationTime);
+  }
+
   steps.forEach((step, index) => {
     step.addEventListener('click', () => {
       if (step.classList.contains(classes.stepActive)) return;
@@ -159,6 +171,8 @@ function stepNavigation() {
       setActiveItem(index);
 
       isMobile.any() && scrollToElement('.tutorials__content');
+
+      adjustContentHeight(index);
     });
 
     ['mouseenter', 'focus'].forEach((eventType) => {
@@ -185,6 +199,7 @@ function stepNavigation() {
   });
 
   setActiveItem(0);
+  adjustContentHeight(0);
 
   dotsContainer.addEventListener('mouseleave', resetDotColors);
 
@@ -199,6 +214,7 @@ function stepNavigation() {
 
   window.addEventListener('resize', () => {
     updateDotStyles();
+    adjustContentHeight(currentContentBlockIndex);
   });
 }
 
