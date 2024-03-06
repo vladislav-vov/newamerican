@@ -1,0 +1,41 @@
+.form {
+  position: relative;
+  max-width: 520px;
+  width: 100%;
+
+  &__input {
+    min-width: 320px;
+    width: 100%;
+    padding: 18px 179px 18px 19px;
+    border: 1px solid rgba($borderColorDark, 0.2);
+    border-radius: 4px;
+    color: #000;
+    font-size: 16px;
+    line-height: percent(19, 16);
+    font-weight: 300;
+
+    &::placeholder {
+      color: rgba(#000, 0.5);
+    }
+
+    @media (max-width: $mobileSmall) {
+      min-width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__btn {
+    display: block;
+
+    @media (min-width: $mobileSmall) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+
+    @media (max-width: $mobileSmall) {
+      margin: 0 auto;
+    }
+  }
+}

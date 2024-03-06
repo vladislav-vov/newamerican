@@ -163,6 +163,8 @@ function stepNavigation() {
   function adjustContentHeight(index) {
     const contentWrapper = document.querySelector('.tutorials__content');
 
+    if (!contentWrapper) return;
+
     setTimeout(() => {
       const currentContentBlockHeight = contentBlocks[index].offsetHeight;
 
@@ -215,6 +217,7 @@ function stepNavigation() {
       const activeIndex = steps.indexOf(e.target);
       showBlock(activeIndex);
       setActiveItem(activeIndex);
+      adjustContentHeight(activeIndex);
     }
   });
 

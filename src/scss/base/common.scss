@@ -265,8 +265,42 @@
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
 .author {
-  color: rgba(#fff, 9.7);
+  color: rgba(#fff, 0.7);
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+
+  &--dark {
+    color: rgba(#000, 0.7);
+  }
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px 20px;
+  width: 100%;
+  padding: 35px 0;
+  border-top: 1px solid rgba(#979797, 0.2);
+
+  @media (max-width: $mobile) {
+    justify-content: center;
+    padding: 25px 0;
+  }
+}
+
+.format {
+  padding: 13px 18px;
+  background-color: rgba(#fff, 0.3);
+  color: #fff;
+  border: 1px solid rgba(#fff, 0.6);
+  border-radius: 4px;
   font-size: 16px;
   line-height: 1;
   font-weight: 700;

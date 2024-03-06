@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Blog"
+})
+
+<body>
+  <section class="webinar-promo">
+    @@include('html/_header.html', {
+    "logoSrc": "img/logo.png"
+    })
+    <div class="webinar-promo__container">
+      <div class="webinar-promo__content">
+        <div>
+          <h1 class="webinar-promo__title title title--h1">Webinar name</h1>
+          <div class="author author--dark">Scott Johnson</div>
+        </div>
+        <p>So you’re about to get into the world of homeownership. It’s okay...everyone feels lost during this
+          process, but the more preparation you do upfront, the smoother your journey will be.</p>
+        <form action="/getWebinar" method="POST" class="webinar-promo__form form">
+          <input type="email" class="form__input" name="email" placeholder="Your Email" required>
+          <button type="submit" class="form__btn button">Get the webinar</button>
+        </form>
+      </div>
+      <div class="webinar-promo__video">
+        <img src="@img/webinar/bg.png" alt="" class="webinar-promo__img">
+        <div data-video-block class="webinar-promo__video-trigger row row-20">
+          <a href="https://www.youtube.com/watch?v=RLgUEEAgvMg" target="_blank" class="play">
+            <svg width="11" height="16" fill="#fff">
+              <use xlink:href="@img/icons/icons.svg#play"></use>
+            </svg>
+          </a>
+          <div class="time">Play demo (<span>0:00</span>)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('html/_overview.html', {
+  "title": "What’s in the report"
+  })
+
+  @@include('html/_mentor-section.html', {
+  "name": "Scott",
+  "title": "About speaker"
+  })
+
+  @@include('html/_guide.html')
+
+  @@include('html/_footer.html')
+
+  @@include('html/_js.html',{})
+</body>
+
+</html>

@@ -1,72 +1,36 @@
-import process from 'node:process';
-import path from 'path';
-import fs from 'fs/promises';
-
 import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
+import path from 'path';
+
+import {
+  handleImageRequests,
+  handleDataRequests,
+  handleMentorRequests,
+  handleFileRequests,
+  handleYoutubeAPIRequest,
+  handleSubscribe,
+} from './handlers/index.js';
 
 const app = express();
 const PORT = process.env.PORT;
-const __dirname = path.resolve();
+export const __dirname = path.resolve();
 
-app.use(
-  cors({ origin: ['http://192.168.252.65:8080'], optionsSuccessStatus: 200 }),
-);
+app.use(cors());
+
+app.use(express.json());
 
 app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
 
-app.get('/:data', async (req, res) => {
-  const dataType = req.params.data;
-  const filePath = path.join(__dirname, 'server', 'db', `${dataType}.json`);
-
-  try {
-    const fileData = await fs.readFile(filePath, 'utf8');
-    const jsonData = JSON.parse(fileData);
-    res.json(jsonData);
-  } catch (error) {
-    console.error(`Error reading ${dataType} data:`, error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
-});
-
-app.get('/files/:file', async (req, res) => {
-  const file = req.params.file;
-  const filePath = path.join(__dirname, 'server', 'db', 'files', `${file}`);
-
-  try {
-    await fs.access(filePath);
-
-    res.sendFile(filePath);
-  } catch (error) {
-    console.error(`Error reading ${filePath} data:`, error);
-    res.status(404).json({ error: 'File not found' });
-  }
-});
-
-app.get('/youtube-api/:videoId', (req, res) => {
-  const apiKey = process.env.YOUTUBE_API_KEY;
-  const videoId = req.params.videoId;
-
-  try {
-    fetch(
-      `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${apiKey}&part=contentDetails`,
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        res.json(data);
-      })
-      .catch((error) => {
-        console.error('Error request:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-      });
-  } catch (error) {
-    console.error('Error request:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
-});
+app.get('/db/img/:category/:image', handleImageRequests);
+app.get('/db/img/:category/icons/:image', handleImageRequests);
+app.get('/:data', handleDataRequests);
+app.get('/mentor/:name', handleMentorRequests);
+app.get('/files/:file', handleFileRequests);
+app.get('/youtube-api/:videoId', handleYoutubeAPIRequest);
+app.post('/getBook', (req, res) =>
+  handleSubscribe({ req, res, fileName: 'bookRequests' }),
+);
+app.post('/getWebinar', (req, res) =>
+  handleSubscribe({ req, res, fileName: 'webinarRequests' }),
+);

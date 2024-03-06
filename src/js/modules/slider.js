@@ -73,7 +73,10 @@ function slider() {
   async function getData() {
     return await fetch(`${baseUrl}/reviews`)
       .then((res) => res.json())
-      .then((data) => data.reviews);
+      .then((data) => data.reviews)
+      .catch((e) =>
+        console.error(`An error occurred during fetch ${e.message}`),
+      );
   }
 
   function createSlide(obj) {
@@ -83,12 +86,12 @@ function slider() {
       <div class="swiper-slide reviews__slider-slide reviews-slide">
         <div class="reviews-slide__head">
           <div class="reviews-slide__avatar">
-            <img src="${thumbnail}" alt="">
+            <img src="${baseUrl}/db/${thumbnail}" alt="">
           </div>
           <div class="reviews-slide__info">
             <div class="accent-subtitle">${city}</div>
             <div class="reviews-slide__title title title--h3">
-              ${name} <img src="${companyIcon}" alt="">
+              ${name} <img src="${baseUrl}/db/${companyIcon}" alt="">
             </div>
             <div>${specialty}</div>
           </div>

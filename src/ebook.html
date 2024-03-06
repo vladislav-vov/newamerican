@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Blog"
+})
+
+<body>
+
+  <section class="ebook-promo">
+    @@include('html/_header.html', {
+    "logoSrc": "img/logo-light.png"
+    })
+    <img src="@img/ebook/promo-bg.jpeg" alt="" class="ebook-promo__bg">
+    <div class="ebook-promo__container">
+      <img data-da=".ebook-promo__content, 767.98, first" src="@img/ebook/book.png" alt="" class="ebook-promo__img">
+      <div class="ebook-promo__main">
+        <div class="ebook-promo__head">
+          <h1 class="ebook-promo__title title title--h1">9 Things You Must Know About Buying Your First Home</h1>
+          <div class="row row-space row-20">
+            <div class="author">Scott Johnson</div>
+            <div class="row row-20">
+              <div class="format">PDF</div>
+              <div class="format">ePUB</div>
+            </div>
+          </div>
+        </div>
+        <div class="ebook-promo__content">
+          <h3 class="title title--h3 mb-20">About the book</h3>
+          <div class="ebook-promo__text">
+            <p>
+              So you’re about to get into the world of homeownership. It’s okay...everyone feels lost during this
+              process, but the more preparation you do upfront, the smoother your journey will be.
+            </p>
+          </div>
+          <form action="/getBook" method="POST" class="ebook-promo__form form">
+            <input type="email" class="form__input" name="email" placeholder="Your Email" required>
+            <button type="submit" class="form__btn button">Get the eBook</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('html/_overview.html', {
+  "title": "What’s in the report"
+  })
+
+  @@include('html/_mentor-section.html', {
+  "name": "Justin",
+  "title": "About author"
+  })
+
+  @@include('html/_guide.html')
+
+  @@include('html/_footer.html')
+
+  @@include('html/_js.html',{})
+</body>
+
+</html>

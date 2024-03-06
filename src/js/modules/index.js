@@ -6,3 +6,6 @@ export { default as popup } from './popup.js';
 export { default as rating } from './rating.js';
 export { default as slider } from './slider.js';
 export { default as download } from './download.js';
+export { default as calcPromoHeight } from './calcPromoHeight.js';
+export { default as getMentor } from './getMentor.js';
+export { default as forms } from './forms.js';

@@ -12,7 +12,7 @@ function updateVideoBlocksTime() {
   if (videoBlocks.length) {
     videoBlocks.forEach((videoBlock) => {
       const url = videoBlock.querySelector('a').href;
-      const timeBlock = videoBlock.querySelector('.time');
+      const timeBlock = videoBlock.querySelector('.time span');
 
       timeBlock.textContent = '0:00';
 

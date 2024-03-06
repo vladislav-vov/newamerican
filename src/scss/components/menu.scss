@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: 100vh;
     background-color: rgba(#878787, 0.6);
     opacity: 0;
     visibility: hidden;
@@ -128,17 +128,6 @@
       &:hover {
         color: $accentColor;
       }
-    }
-  }
-
-  &__action {
-    width: 100%;
-    gap: 15px 20px;
-    padding: 35px 0;
-    border-top: 1px solid rgba(#979797, 0.2);
-
-    @media (max-width: $mobile) {
-      padding: 25px 0;
     }
   }
 }

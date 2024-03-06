@@ -10,7 +10,7 @@ function fetchMentors() {
   fetch(`${baseUrl}/mentors`)
     .then((res) => res.json())
     .then((data) => {
-      data.mentors.forEach((mentor) => {
+      data.forEach((mentor) => {
         const { name, title, text, thumbnail, videoUrl, skills } = mentor;
 
         const skillsList = skills
@@ -18,7 +18,7 @@ function fetchMentors() {
             (skill) => `
             <li class="mentor-card__item">
               <div class="mentor-card__item-img">
-                <img src="${skill.icon}" alt="Icon">
+                <img src="${baseUrl}/db/${skill.icon}" alt="Icon">
               </div>
               <p class="mentor-card__item-text">${skill.name}</p>
             </li>
@@ -29,7 +29,9 @@ function fetchMentors() {
         const card = `
           <div class="mentor-card">
             <div class="mentor-card__head">
-              <img src="${thumbnail}" alt="Portrait of ${name}">
+              <div class="mentor-card__img">
+                <img src="${baseUrl}/db/${thumbnail}" alt="Portrait of ${name}">
+              </div>
               <div class="mentor-card__action">
                 <a href="${videoUrl}" target="_blank" class="play">
                   <svg width="11" height="16">

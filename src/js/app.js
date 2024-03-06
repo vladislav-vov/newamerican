@@ -9,6 +9,9 @@ import {
   rating,
   slider,
   download,
+  calcPromoHeight,
+  getMentor,
+  forms,
 } from './modules/index.js';
 
 import '../scss/style.scss';
@@ -22,4 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   rating();
   slider();
   download('[data-download]');
+  calcPromoHeight();
+  getMentor();
+  forms();
 });

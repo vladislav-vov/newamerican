@@ -1,11 +1,23 @@
 .mentor-card {
+  max-width: 996px;
+  margin: 0 auto;
+
   &__head {
     position: relative;
     max-height: 220px;
     padding: 0 35px;
+    overflow: hidden;
 
     @media (max-width: $mobileSmall) {
       padding: 0 25px;
+    }
+  }
+
+  &__img {
+    max-width: 308px;
+
+    img {
+      object-fit: contain;
     }
   }
 
@@ -41,6 +53,40 @@
 
     @media (max-width: $mobileSmall) {
       padding: 20px;
+    }
+
+    &--row {
+      .mentor-card__img {
+        max-width: 365px;
+        align-self: flex-end;
+
+        @media (max-width: $mobile) {
+          margin: 0 auto 30px;
+        }
+      }
+
+      @media (min-width: $mobile) {
+        display: grid;
+        grid-template-columns: minmax(auto, 365px) auto;
+        align-items: center;
+        gap: 50px;
+        padding: 40px 136px 0 83px;
+        min-height: 378px;
+        @include adaptiveValue('padding-left', 83, 40, $containerWidth, 768);
+        @include adaptiveValue('padding-right', 136, 40, $containerWidth, 768);
+      }
+
+      @media (max-width: $tablet) {
+        gap: 30px;
+      }
+
+      @media (max-width: $mobile) {
+        padding: 40px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        padding: 20px;
+      }
     }
   }
 

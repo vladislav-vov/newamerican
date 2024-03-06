@@ -1,0 +1,186 @@
+.ebook-promo {
+  @extend %section;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__container {
+    @include adaptiveValue('padding-top', 200, 120);
+
+    @media (min-width: $mobile) {
+      display: grid;
+      align-items: flex-start;
+      grid-template-columns: percent(498, 1270) auto;
+      gap: 60px;
+    }
+
+    @media (max-width: $tablet) {
+      gap: 30px;
+    }
+  }
+
+  &__img {
+    display: block;
+    aspect-ratio: 498/708;
+
+    @media (max-width: $mobile) {
+      max-height: 540px;
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__title {
+    max-width: 434px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  &__head {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    @media (min-width: $mobile) {
+      max-width: 480px;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__form {
+    @media (max-width: $mobile) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.overview {
+  @extend %section;
+
+  &__container {
+    max-width: 900px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 38px;
+
+    @media (max-width: $mobile) {
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+
+    @media (max-width: $mobile) {
+      gap: 15px;
+    }
+  }
+
+  &__item-title {
+    text-align: center;
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 27px 58px 0 rgba(25, 78, 96, 0.14);
+  }
+}
+
+.guide {
+  @extend %section;
+
+  &__container {
+    @media (min-width: $mobile) {
+      display: flex;
+      align-items: center;
+      row-gap: 30px;
+      @include adaptiveValue('column-gap', 64, 20, $containerWidth, 768);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+
+    @media (min-width: $tablet) {
+      padding: 30px 0;
+    }
+
+    @media (min-width: $mobile) {
+      max-width: 486px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img {
+    aspect-ratio: 690/402;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__action {
+    padding-bottom: 0;
+  }
+}
