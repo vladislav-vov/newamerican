@@ -6,6 +6,8 @@ function calcPromoHeight() {
   const promoContent = document.querySelector('.ebook-promo__head');
   const header = document.querySelector('.header');
 
+  if (!promoContainer || !promoBg || !promoContent || !header) return;
+
   const updatePromoHeight = () => {
     const paddingTop = removeUnits(getComputedStyle(promoContainer).paddingTop);
     const contentHeight = promoContent.offsetHeight;

@@ -69,12 +69,7 @@ export function protectModule(moduleFunction) {
   return function (...args) {
     try {
       return moduleFunction.apply(this, args);
-    } catch (error) {
-      console.error(
-        `An error occurred in the module: ${moduleFunction.name}`,
-        error.message,
-      );
-    }
+    } catch (error) {}
   };
 }
 

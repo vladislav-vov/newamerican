@@ -1,11 +1,7 @@
 import { baseUrl } from '../utils/constants.js';
 
-import { protectModule } from '../helpers/functions.js';
-
 function download(selector) {
   const btns = document.querySelectorAll(selector);
-
-  if (!btns) return;
 
   btns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -45,4 +41,4 @@ function download(selector) {
   }
 }
 
-export default protectModule(download);
+export default download;

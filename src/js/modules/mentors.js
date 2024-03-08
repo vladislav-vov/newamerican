@@ -1,7 +1,5 @@
 import { baseUrl } from '../utils/constants.js';
 
-import { protectModule } from '../helpers/functions.js';
-
 function fetchMentors() {
   const mentorsContainer = document.querySelector('.mentors__cards');
 
@@ -67,4 +65,4 @@ function fetchMentors() {
     });
 }
 
-export default protectModule(fetchMentors);
+export default fetchMentors;

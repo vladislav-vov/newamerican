@@ -1,5 +1,3 @@
-import { protectModule } from '../helpers/functions.js';
-
 import { baseUrl } from '../utils/constants.js';
 
 function forms() {
@@ -43,4 +41,4 @@ function forms() {
   });
 }
 
-export default protectModule(forms);
+export default forms;

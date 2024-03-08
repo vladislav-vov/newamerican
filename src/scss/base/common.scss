@@ -117,48 +117,12 @@
     }
   }
 
-  &--animated {
+  &--small {
     position: relative;
     height: auto;
     padding: 12px 14px 12px 29px;
     gap: 14px;
     border-radius: 22px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 30px;
-      background-color: rgba($accentColor, 0.4);
-      z-index: -1;
-      animation: btn-animation 1s infinite;
-      transition:
-        width 0.3s linear,
-        height 0.3s linear,
-        transform 0.3s linear;
-      transform-origin: top left;
-    }
-
-    @keyframes btn-animation {
-      0% {
-        transform: translate(0, 0);
-        width: 100%;
-        height: 100%;
-      }
-      50% {
-        transform: translate(-4%, -12%);
-        width: 109%;
-        height: 130%;
-      }
-      100% {
-        transform: translate(0, 0);
-        width: 100%;
-        height: 100%;
-      }
-    }
   }
 }
 

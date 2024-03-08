@@ -8,7 +8,7 @@ function getMentor() {
 
   let name = mentorSection.getAttribute('data-mentor');
 
-  if (!name) return;
+  if (!name) throw new Error('Mentor name is undefined');
 
   fetch(`${baseUrl}/mentor/${name}`)
     .then((res) => res.json())
