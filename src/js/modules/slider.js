@@ -7,6 +7,7 @@ import {
   removeUnits,
   setElementStyles,
   protectModule,
+  throttle,
 } from '../helpers/functions.js';
 
 import 'swiper/css';
@@ -177,7 +178,7 @@ function slider() {
     }
   }
 
-  window.addEventListener('resize', handleResize);
+  window.addEventListener('resize', throttle(handleResize, 100));
 }
 
 export default protectModule(slider);

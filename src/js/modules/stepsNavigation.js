@@ -5,6 +5,7 @@ import {
   isMobile,
   removeUnits,
   protectModule,
+  throttle,
 } from '../helpers/functions.js';
 
 import { rootStyles } from '../utils/constants.js';
@@ -221,10 +222,13 @@ function stepNavigation() {
     }
   });
 
-  window.addEventListener('resize', () => {
-    updateDotStyles();
-    adjustContentHeight(currentContentBlockIndex);
-  });
+  window.addEventListener(
+    'resize',
+    throttle(() => {
+      updateDotStyles();
+      adjustContentHeight(currentContentBlockIndex);
+    }, 100),
+  );
 }
 
 export default protectModule(stepNavigation);
